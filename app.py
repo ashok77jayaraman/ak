@@ -28,7 +28,7 @@ def login():
 def dashboard():
     if session.get('logged_in'):
         # Add the image file names you want to display
-        image_files = ['image1.jpg', 'image2.jpg', 'image3.jpg']
+        image_files = ['image1.jpg', 'image2.jpg', 'image3.jpg','dog.jpg']
 
         # Pass the image files to the template
         return render_template('dashboard.html', image_files=image_files)

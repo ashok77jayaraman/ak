@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-login-app
+spec:
+  replicas: 3  # Adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: flask-login-app
+  template:
+    metadata:
+      labels:
+        app: flask-login-app
+    spec:
+      containers:
+      - name: flask-login-app
+        image: your-registry/flask-login-app:latest  # Replace with your Docker image URL
+        ports:
+        - containerPort: 5000
+

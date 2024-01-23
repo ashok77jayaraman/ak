@@ -1,5 +1,3 @@
-Certainly! Below is a template for documenting your Flask application deployment using Jenkins for CI/CD with Docker and Kubernetes. You can customize it further based on your specific project details.
-
 # Project Documentation: Flask Application Deployment with Jenkins CI/CD
 
 ## Overview

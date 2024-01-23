@@ -27,9 +27,12 @@ def login():
 @app.route('/dashboard')
 def dashboard():
     if session.get('logged_in'):
-        return "Welcome to the dashboard!"
+        # Add the image file names you want to display
+        image_files = ['image1.jpg', 'image2.png', 'image3.gif']
+
+        # Pass the image files to the template
+        return render_template('dashboard.html', image_files=image_files)
     else:
         return redirect(url_for('home'))
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

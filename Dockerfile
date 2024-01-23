@@ -23,7 +23,7 @@ COPY app.py .
 COPY templates templates
 
 # Make port 5000 available to the world outside this container
-EXPOSE 5000
+#EXPOSE 5000
 
 # Define environment variable
 ENV FLASK_APP=app.py

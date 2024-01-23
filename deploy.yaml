@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-login-app
-        image: your-registry/flask-login-app:latest  # Replace with your Docker image URL
+        image: docker.io/ashok77jayaraman/flask-login-app:latest
         ports:
         - containerPort: 5000
 

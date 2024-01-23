@@ -9,7 +9,7 @@ COPY requirements.txt .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-
+RUN pip install gunicorn
 # Stage 2: Create the final image
 FROM python:3.8-slim
 
@@ -18,7 +18,7 @@ WORKDIR /app
 
 # Copy only the necessary files from the builder stage
 COPY --from=builder /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8/site-packages
-COPY --from=builder /usr/local/bin/gunicorn /usr/local/bin/gunicorn
+COPY --from=builder /usr/local/bin/gunicorn /usr/local/bin/  # Correct the path
 COPY app.py .
 COPY templates templates
 

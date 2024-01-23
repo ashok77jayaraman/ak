@@ -18,7 +18,7 @@ WORKDIR /app
 
 # Copy only the necessary files from the builder stage
 COPY --from=builder /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8/site-packages
-COPY --from=builder /usr/local/bin/gunicorn /usr/local/bin/  # Correct the path
+COPY --from=builder /usr/local/bin/gunicorn /usr/local/bin/
 COPY app.py .
 COPY templates templates
 
